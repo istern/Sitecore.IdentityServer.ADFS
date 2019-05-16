@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SitecorePlugin PluginName="Sitecore.IdentityServer.ADFS" AssemblyName="Sitecore.IdentityServer.ADFS" Version="1.0.0">
+  <Dependencies />
+  <Tags />
+</SitecorePlugin>

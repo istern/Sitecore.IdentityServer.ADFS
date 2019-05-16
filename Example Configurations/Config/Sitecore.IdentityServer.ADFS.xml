@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Settings>
+  <Sitecore>
+    <ExternalIdentityProviders>
+      <IdentityProviders>
+      <ADFS type="Sitecore.Plugin.IdentityProviders.IdentityProvider, Sitecore.Plugin.IdentityProviders">
+          <AuthenticationScheme>adfs</AuthenticationScheme>
+          <DisplayName>AD</DisplayName>
+          <Enabled>true</Enabled>
+          <ClientId>ClienID GOES HERE</ClientId>
+          <Authority>Auhority URL</Authority>
+          <MetaAddress>Meta address URL</MetaAddress>
+          <ClaimsTransformations>
+            <!--Place transformation rules here. -->
+            <ClaimsTransformation1 type="Sitecore.Plugin.IdentityProviders.DefaultClaimsTransformation, Sitecore.Plugin.IdentityProviders">
+              <SourceClaims>
+                <Claim1 type="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname" />
+              </SourceClaims>
+              <NewClaims>
+                <Claim1 type="name" />
+              </NewClaims>
+            </ClaimsTransformation1 >
+            <ClaimsTransformation2 type="Sitecore.Plugin.IdentityProviders.DefaultClaimsTransformation, Sitecore.Plugin.IdentityProviders">
+              <SourceClaims>
+                <Claim1 type="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" />
+              </SourceClaims>
+              <NewClaims>
+                <Claim1 type="email" />
+              </NewClaims>
+            </ClaimsTransformation2>
+
+          </ClaimsTransformations>
+        </ADFS>
+      </IdentityProviders>
+    </ExternalIdentityProviders>
+  </Sitecore>
+</Settings>
